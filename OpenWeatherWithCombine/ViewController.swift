@@ -28,17 +28,14 @@ class ViewController: UIViewController {
         
     }
     @IBAction func newButton(_ sender: Any) {
+        view.endEditing(true)
         guard let cityName = cityTextField.text else { return }
         getTemperature(for: cityName)
     }
     
-    @IBAction func searchPressedButton(_ sender: Any) {
-        guard let cityName = cityTextField.text else { return }
-        getTemperature(for: cityName)
-    }
     
     private func getTemperature(for cityName: String) {
-        guard let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(keyAPI)") else { return }
+        guard let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(keyAPI)&units=metric") else { return }
         
         cancellable = URLSession.shared.dataTaskPublisher(for: weatherURL)
             .tryMap { data, response -> Data in
@@ -49,12 +46,18 @@ class ViewController: UIViewController {
                     }
                 return data
             }
+            .decode(type: WeatherModel.self, decoder: JSONDecoder())
+            .catch { error in
+                return Just(WeatherModel.placeholder)
+            }
+            .map { $0.main?.temp ?? 0.0 }
+            .map { "\($0)℃" }
             .subscribe(on: DispatchQueue.global(qos: .background))
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 
-            }, receiveValue: { temp in
-                print(temp)
+            }, receiveValue: { [self] temp in
+                temperatureLabel.text = "\(temp)"
             })
     }
 }

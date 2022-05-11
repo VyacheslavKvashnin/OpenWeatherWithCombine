@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="13T-V5-TlY">
-                                <rect key="frame" x="20" y="127" width="374" height="337"/>
+                                <rect key="frame" x="20" y="127" width="374" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXv-e2-eCB">
                                         <rect key="frame" x="67" y="0.0" width="240" height="51.5"/>
@@ -27,43 +27,37 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tD9-bz-bqC">
                                         <rect key="frame" x="20" y="110.5" width="334" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="whx-hq-aad"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmv-69-5xV">
-                                        <rect key="frame" x="20" y="203.5" width="334" height="25.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmv-69-5xV">
+                                        <rect key="frame" x="172.5" y="203.5" width="29.5" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypv-Hd-8lz">
-                                        <rect key="frame" x="131.5" y="288" width="111.5" height="49"/>
-                                        <color key="backgroundColor" red="0.48157529249999997" green="0.18534001789999999" blue="0.79960843550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Search">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="29"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="searchPressedButtun:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dri-8B-FpK"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="tD9-bz-bqC" firstAttribute="leading" secondItem="13T-V5-TlY" secondAttribute="leading" constant="20" id="0E1-Qg-Xw5"/>
-                                    <constraint firstItem="Bmv-69-5xV" firstAttribute="leading" secondItem="13T-V5-TlY" secondAttribute="leading" constant="20" id="dNM-wb-xBc"/>
                                     <constraint firstAttribute="trailing" secondItem="tD9-bz-bqC" secondAttribute="trailing" constant="20" id="kyw-Pq-VnA"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-kV-kZj">
-                                <rect key="frame" x="174" y="527" width="67" height="31"/>
+                                <rect key="frame" x="159" y="427" width="96.5" height="43"/>
+                                <color key="backgroundColor" red="0.48157529249999997" green="0.18534001789999999" blue="0.79960843550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="newButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCz-PY-v05"/>
                                 </connections>
@@ -73,16 +67,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="13T-V5-TlY" secondAttribute="trailing" constant="20" id="5rl-zd-mNV"/>
-                            <constraint firstItem="nmy-kV-kZj" firstAttribute="top" secondItem="13T-V5-TlY" secondAttribute="bottom" constant="63" id="7VY-yl-2YX"/>
                             <constraint firstItem="13T-V5-TlY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="NFg-Ev-Pcq"/>
                             <constraint firstItem="13T-V5-TlY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R7U-LS-OHk"/>
-                            <constraint firstItem="nmy-kV-kZj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="YDS-XE-DnA"/>
+                            <constraint firstItem="nmy-kV-kZj" firstAttribute="top" secondItem="13T-V5-TlY" secondAttribute="bottom" constant="71" id="UbO-Mi-Q9Z"/>
                             <constraint firstItem="13T-V5-TlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b9k-tO-p19"/>
+                            <constraint firstItem="nmy-kV-kZj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fjk-c0-3vL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityTextField" destination="tD9-bz-bqC" id="xQf-aV-qi1"/>
-                        <outlet property="searchButton" destination="ypv-Hd-8lz" id="h3H-wM-MIr"/>
                         <outlet property="temperatureLabel" destination="Bmv-69-5xV" id="6eJ-el-7Ay"/>
                     </connections>
                 </viewController>
