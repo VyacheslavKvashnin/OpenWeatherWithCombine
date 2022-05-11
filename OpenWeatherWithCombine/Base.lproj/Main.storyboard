@@ -44,6 +44,14 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="29"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="searchPressedButtun:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dri-8B-FpK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -52,16 +60,31 @@
                                     <constraint firstAttribute="trailing" secondItem="tD9-bz-bqC" secondAttribute="trailing" constant="20" id="kyw-Pq-VnA"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-kV-kZj">
+                                <rect key="frame" x="174" y="527" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="newButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCz-PY-v05"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="13T-V5-TlY" secondAttribute="trailing" constant="20" id="5rl-zd-mNV"/>
+                            <constraint firstItem="nmy-kV-kZj" firstAttribute="top" secondItem="13T-V5-TlY" secondAttribute="bottom" constant="63" id="7VY-yl-2YX"/>
                             <constraint firstItem="13T-V5-TlY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="NFg-Ev-Pcq"/>
                             <constraint firstItem="13T-V5-TlY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R7U-LS-OHk"/>
+                            <constraint firstItem="nmy-kV-kZj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="YDS-XE-DnA"/>
                             <constraint firstItem="13T-V5-TlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b9k-tO-p19"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="tD9-bz-bqC" id="xQf-aV-qi1"/>
+                        <outlet property="searchButton" destination="ypv-Hd-8lz" id="h3H-wM-MIr"/>
+                        <outlet property="temperatureLabel" destination="Bmv-69-5xV" id="6eJ-el-7Ay"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
