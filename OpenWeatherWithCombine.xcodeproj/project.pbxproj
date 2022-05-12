@@ -58,16 +58,56 @@
 		BD04CB44282C318400B3F8DE /* OpenWeatherWithCombine */ = {
 			isa = PBXGroup;
 			children = (
-				BD04CB45282C318400B3F8DE /* AppDelegate.swift */,
-				BD04CB47282C318400B3F8DE /* SceneDelegate.swift */,
-				BD04CB59282C40F300B3F8DE /* WeatherModel.swift */,
-				BD04CB49282C318400B3F8DE /* ViewController.swift */,
-				BD04CB4B282C318400B3F8DE /* Main.storyboard */,
-				BD04CB4E282C318500B3F8DE /* Assets.xcassets */,
-				BD04CB50282C318500B3F8DE /* LaunchScreen.storyboard */,
-				BD04CB53282C318500B3F8DE /* Info.plist */,
+				BD28E6E9282D142C00A124FF /* ViewControllers */,
+				BD28E6E8282D142100A124FF /* Models */,
+				BD28E6E6282D13D800A124FF /* Storyboards */,
+				BD28E6E7282D13F300A124FF /* App */,
+				BD28E6E5282D13A300A124FF /* Resources */,
 			);
 			path = OpenWeatherWithCombine;
+			sourceTree = "<group>";
+		};
+		BD28E6E5282D13A300A124FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD04CB4E282C318500B3F8DE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD28E6E6282D13D800A124FF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD04CB4B282C318400B3F8DE /* Main.storyboard */,
+				BD04CB50282C318500B3F8DE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD28E6E7282D13F300A124FF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BD04CB45282C318400B3F8DE /* AppDelegate.swift */,
+				BD04CB47282C318400B3F8DE /* SceneDelegate.swift */,
+				BD04CB53282C318500B3F8DE /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BD28E6E8282D142100A124FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD04CB59282C40F300B3F8DE /* WeatherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD28E6E9282D142C00A124FF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD04CB49282C318400B3F8DE /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P745L5C6BY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OpenWeatherWithCombine/Info.plist;
+				INFOPLIST_FILE = OpenWeatherWithCombine/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P745L5C6BY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OpenWeatherWithCombine/Info.plist;
+				INFOPLIST_FILE = OpenWeatherWithCombine/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
